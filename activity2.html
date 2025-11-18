@@ -10,6 +10,7 @@
     <p>Use the 'extends' keyword to inherit all the methods from another class</p>
     <p>Use the 'super' method to call the parent's constructor function</p>
     <p id ="details"></p>
+    <p id="details2"></p>
     <script>
         class Car{
             constructor(brand){
@@ -31,6 +32,7 @@
             let myCar = new Model("Ford","Mustang");
             document.getElementById("details").innerHTML = myCar.show();
         
+            document.getElementById("details2").innerHTML = myCar.present();
     </script>
 </body>
 </html>

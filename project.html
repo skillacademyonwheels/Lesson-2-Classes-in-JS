@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+
+    <h1>Project in JS Classes</h1>
+    <p></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        class Person {
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            details(){
+                return `Name: ${this.name}, Age: ${this.age}`;
+            }
+        }
+        // Inheriting Person class
+        class Employee extends Person {
+            constructor(name, age, position){
+                super(name, age);
+                this.position = position;
+            }
+             get details(){
+                return `${super.details()}, Position: ${this.position}`;
+            }
+
+            static company(){
+                return "Tech Solutions Inc.";
+            }
+
+
+        }
+
+        const person = new Employee("Anubhav Lal",100,"Coding Instructor");
+        document.getElementById("demo1").innerHTML = person.details;
+        // Accessing static method
+        document.getElementById("demo2").innerHTML = Employee.company();
+
+    </script>
+</body>
+</html>
